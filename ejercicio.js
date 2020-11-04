@@ -17,9 +17,13 @@ const crearNota = (notasArr, titulo, cuerpo) => {// return length
 }
 
 const borrarNota = (notasArr, titulo) => { // return nota borrada
-    return notasArr.splice(notasArr.findIndex(nota => {
-        return nota.titulo === titulo;
-    }), 1);
+    if (notasArr.findIndex(nota => { return nota.titulo === titulo; }) !== -1) {
+        return notasArr.splice(notasArr.findIndex(nota => {
+            return nota.titulo === titulo;
+        }), 1);
+    } else {
+        return 'Nada para borrar';
+    }
 }
 
 const ordernarNotas = (notasArr, orden) => {// orden = 'titulo' o 'cuerpo'
@@ -48,6 +52,7 @@ const buscarTextoEnNotas = (notasArr, buscaArg) => {
 }
 
 console.log('Crear nota', crearNota(notas, 'morales', 'Tampoco no caseros modesto moclearrales vapores ha el intimas.'));
+console.log('Borrar mala nota: ', borrarNota(notas, 'de VSCode'));
 console.log('Borrar nota: ', borrarNota(notas, 'truco de VSCode'));
 console.log('Ordenar por contenido', ordernarNotas(notas, 'cuerpo'));
 console.log('Ordenar por titulo', ordernarNotas(notas, 'titulo'));
