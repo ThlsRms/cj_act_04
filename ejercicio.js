@@ -1,18 +1,18 @@
 'use strict';
 
 const notas = [
-    {titulo: 'truco de VSCode', cuerpo: 'usar snippets para todos'},
-    {titulo: 'Prestaba llegaron misterio si lo', cuerpo: 'Cultivar se linajuda epigonos practico ha.'},
-    {titulo: 'beber agua', cuerpo: 'Yo fantastico anaranjado trabajador eh.'},
-    {titulo: 'Afectacion', cuerpo: 'calcetines reconditos etc fue imprevisto mas encendidos arrepintio.'},
-    {titulo: 'Aprender', cuerpo: 'es instante cobraban hermanas inaudito ti un'},
-    {titulo: 'De confeso negarle cayeron le', cuerpo: 'Olvidado volviera probable monotono ma sollozos il.'},
-    {titulo: 'ceremonial', cuerpo: 'Con cual suyo supo aire fue boga. '},
-    {titulo: 'Gentilica', cuerpo: 'revolvian enamorado oh iconoteca yo cristiano documento.'},
+    { titulo: 'truco de VSCode', cuerpo: 'usar snippets para todos' },
+    { titulo: 'Prestaba llegaron misterio si lo', cuerpo: 'Cultivar se linajuda epigonos practico ha.' },
+    { titulo: 'beber agua', cuerpo: 'Yo fantastico anaranjado trabajador eh.' },
+    { titulo: 'Afectacion', cuerpo: 'calcetines reconditos etc fue imprevisto mas encendidos arrepintio.' },
+    { titulo: 'Aprender', cuerpo: 'es instante cobraban hermanas inaudito ti un' },
+    { titulo: 'De confeso negarle cayeron le', cuerpo: 'Olvidado volviera probable monotono ma sollozos il.' },
+    { titulo: 'ceremonial', cuerpo: 'Con cual suyo supo aire fue boga. ' },
+    { titulo: 'Gentilica', cuerpo: 'revolvian enamorado oh iconoteca yo cristiano documento.' },
 ]
 
 const crearNota = (notasArr, titulo, cuerpo) => {// return length
-    notasArr.push({titulo: titulo, cuerpo: cuerpo});
+    notasArr.push({ titulo: titulo, cuerpo: cuerpo });
     return notasArr.length;
 }
 
@@ -29,12 +29,12 @@ const borrarNota = (notasArr, titulo) => { // return nota borrada
 const ordernarNotas = (notasArr, orden) => {// orden = 'titulo' o 'cuerpo'
     if (orden === 'titulo') {
         return notasArr.sort((tituloA, tituloB) => {
-            return tituloA.titulo.toLowerCase() < tituloB.titulo.toLowerCase()? -1 : 1;
+            return tituloA.titulo.toLowerCase() < tituloB.titulo.toLowerCase() ? -1 : 1;
         })
     }
     else if (orden === 'cuerpo') {
         return notasArr.sort((cuerpoA, cuerpoB) => {
-            return cuerpoA.cuerpo.toLowerCase() < cuerpoB.cuerpo.toLowerCase()? -1 : 1;
+            return cuerpoA.cuerpo.toLowerCase() < cuerpoB.cuerpo.toLowerCase() ? -1 : 1;
         })
     }
 }
