@@ -35,10 +35,16 @@ const ordernarNotas = (notasArr, orden) => {// orden = 'titulo' o 'cuerpo'
     }
 }
 
-const buscarTextoEnNotas = (notasArr, buscaArg) => {// return primer resultado
+const buscarTextoEnNotas = (notasArr, buscaArg) => {
+    /* // return primer resultado
     return notasArr.find(nota => {
         return nota.cuerpo.toLowerCase().includes(buscaArg.toLowerCase());
-    });
+    }); */
+
+    // return todos resultados
+    return notasArr.filter(nota => {
+        return nota.cuerpo.toLowerCase().includes(buscaArg.toLowerCase());
+    })
 }
 
 console.log('Crear nota', crearNota(notas, 'morales', 'Tampoco no caseros modesto moclearrales vapores ha el intimas.'));
