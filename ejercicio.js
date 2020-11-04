@@ -12,15 +12,16 @@ const notas = [
 ]
 
 const crearNota = (notasArr, titulo, cuerpo) => {// return length
-    notasArr.push({ titulo: titulo, cuerpo: cuerpo });
-    return notasArr.length;
+    return notasArr.push({ titulo: titulo, cuerpo: cuerpo });
 }
 
 const borrarNota = (notasArr, titulo) => { // return nota borrada
-    if (notasArr.findIndex(nota => { return nota.titulo === titulo }) !== -1) {
-        return notasArr.splice(notasArr.findIndex(nota => {
-            return nota.titulo === titulo;
-        }), 1);
+    let tituloIndex = notasArr.findIndex(nota => {
+        return nota.titulo === titulo; 
+    });
+
+    if (tituloIndex !== -1) {
+        return notasArr.splice(tituloIndex, 1);
     } else {
         return 'Nada para borrar';
     }
