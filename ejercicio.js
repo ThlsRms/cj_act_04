@@ -17,7 +17,7 @@ const crearNota = (notasArr, titulo, cuerpo) => {// return length
 }
 
 const borrarNota = (notasArr, titulo) => { // return nota borrada
-    if (notasArr.findIndex(nota => { return nota.titulo === titulo; }) !== -1) {
+    if (notasArr.findIndex(nota => { return nota.titulo === titulo }) !== -1) {
         return notasArr.splice(notasArr.findIndex(nota => {
             return nota.titulo === titulo;
         }), 1);
