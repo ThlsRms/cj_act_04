@@ -1,0 +1,14 @@
+{
+  "name": "notas",
+  "version": "0.0.1",
+  "description": "App para tomar notas",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "ThalesR",
+  "license": "ISC",
+  "dependencies": {
+    "yargs": "^16.1.0"
+  }
+}
